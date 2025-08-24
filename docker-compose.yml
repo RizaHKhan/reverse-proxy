@@ -1,0 +1,31 @@
+services:
+  proxy:
+    build:
+      context: ./proxy
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    networks:
+      - proxy
+  app1:
+    build:
+      context: ./app1
+      dockerfile: Dockerfile
+    networks:
+      - proxy
+  app2:
+    build:
+      context: ./app2
+      dockerfile: Dockerfile
+    networks:
+      - proxy
+  php:
+    build:
+      context: ./php
+      dockerfile: Dockerfile
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    driver: bridge

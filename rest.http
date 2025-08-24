@@ -1,0 +1,15 @@
+### App 1
+
+GET http://localhost/app1/
+Accept: application/json
+Content-Type: application/json
+
+### App 2
+
+GET http://localhost/app2/
+Accept: application/json
+Content-Type: application/json
+
+### PHP
+
+GET http://localhost/
