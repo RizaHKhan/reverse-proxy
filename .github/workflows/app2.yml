@@ -31,8 +31,8 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker build -t ${{IMAGE_NAME}}:latest -f ${{IMAGE_NAME}}/Dockerfile ${{IMAGE_NAME}} 
-          docker tag ${{IMAGE_NAME}}:latest ${{secrets.LOCATION}}/${{IMAGE_NAME}}:latest
-          docker push ${{secrets.LOCATION}}/${{IMAGE_NAME}}:latest
+          docker build -t ${IMAGE_NAME}:latest -f ${IMAGE_NAME}/Dockerfile ${IMAGE_NAME} 
+          docker tag ${IMAGE_NAME}:latest ${{secrets.LOCATION}}/${IMAGE_NAME}:latest
+          docker push ${{secrets.LOCATION}}/${IMAGE_NAME}:latest
 
 
