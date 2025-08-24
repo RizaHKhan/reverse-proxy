@@ -5,11 +5,11 @@ on:
     branches:
       - master
 
-env:
-  IMAGE_NAME: php
-
 jobs:
   build-and-deploy:
+    env:
+      IMAGE_NAME: php
+
     runs-on: ubuntu-latest
 
     steps:

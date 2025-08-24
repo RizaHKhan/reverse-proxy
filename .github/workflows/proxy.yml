@@ -5,12 +5,12 @@ on:
     branches:
       - master
 
-env:
-  IMAGE_NAME: proxy
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    env:
+      IMAGE_NAME: proxy
 
     steps:
       - name: Checkout code

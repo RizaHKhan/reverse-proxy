@@ -5,11 +5,11 @@ on:
     branches:
       - master
 
-env:
-  IMAGE_NAME: app2
 
 jobs:
   build-and-deploy:
+    env:
+      IMAGE_NAME: app2
     runs-on: ubuntu-latest
 
     steps:
