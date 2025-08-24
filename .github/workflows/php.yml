@@ -7,9 +7,6 @@ on:
 
 jobs:
   build-and-deploy:
-    env:
-      IMAGE_NAME: php
-
     runs-on: ubuntu-latest
 
     steps:
@@ -31,7 +28,7 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker build -t ${IMAGE_NAME}:latest -f ${IMAGE_NAME}/Dockerfile ${IMAGE_NAME} 
-          docker tag ${IMAGE_NAME}:latest ${{secrets.LOCATION}}/${IMAGE_NAME}:latest
-          docker push ${{secrets.LOCATION}}/${IMAGE_NAME}:latest
+          docker build -t php:latest -f php/Dockerfile php 
+          docker tag php:latest ${{secrets.LOCATION}}/php:latest
+          docker push ${{secrets.LOCATION}}/php:latest
 
